@@ -4550,26 +4550,28 @@ SkipMacroDefinitionBody: false
 #
 # 控制 clang-format 是否以及如何排序 #include 。如果没有，则包含永远不会排序。如果不区分大小写，则包含以 ascii 或不区分大小写的方式排序。如果区分大小写，则包含按字母或区分大小写的方式排序。
 #
-SortIncludes:
-    #
-    # +---------------------------+
-    # | DO-NOT-REMOVE-INDENTATION |
-    # +---------------------------+
-    #
-
-    # Enabled: 如果为 true ，则根据下面的其他子选项对包含进行排序。
-    #
-    Enabled: true
-
-    # IgnoreCase: 如果为 true ，则在排序包含时忽略大小写。例如：
-    #     true:                      false:
-    #     #include "A/B.h"    vs.    #include "A/B.h"
-    #     #include "A/b.h"           #include "A/b.h"
-    #     #include "a/b.h"           #include "B/A.h"
-    #     #include "B/A.h"           #include "B/a.h"
-    #     #include "B/a.h"           #include "a/b.h"
-    #
-    IgnoreCase: true
+# SortIncludes:
+#     #
+#     # +---------------------------+
+#     # | DO-NOT-REMOVE-INDENTATION |
+#     # +---------------------------+
+#     #
+#
+#     # Enabled: 如果为 true ，则根据下面的其他子选项对包含进行排序。
+#     #
+#     Enabled: true
+#
+#     # IgnoreCase: 如果为 true ，则在排序包含时忽略大小写。例如：
+#     #     true:                      false:
+#     #     #include "A/B.h"    vs.    #include "A/B.h"
+#     #     #include "A/b.h"           #include "A/b.h"
+#     #     #include "a/b.h"           #include "B/A.h"
+#     #     #include "B/A.h"           #include "B/a.h"
+#     #     #include "B/a.h"           #include "a/b.h"
+#     #
+#     IgnoreCase: true
+#
+SortIncludes: CaseSensitive
 # ^^^^^^
 
 # vvvvvv
